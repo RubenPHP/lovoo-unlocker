@@ -1,0 +1,37 @@
+{
+  "name": "Lovoo Unlocker Chrome Extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Unlock some features of lovoo.",
+  "homepage_url": "https://github.com/RubenPHP/lovoo-unlocker",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://es.lovoo.com/discover/people", //personas
+        "https://es.lovoo.com/discover/freshmen", //nuevo en lovoo - OCULTO
+        "https://es.lovoo.com/list/visits", //visitas al perfil - OCULTO
+        "https://es.lovoo.com/list/liked-you" //les gustas - OCULTO
+
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "js": [
+        "js/jquery/jquery.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+  ]
+}
