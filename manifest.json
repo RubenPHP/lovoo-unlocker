@@ -28,6 +28,7 @@
       ],
       "js": [
         "js/jquery/jquery.js",
+        "js/md5/js/md5.js",
         "src/inject/inject.js"
       ]
     }
